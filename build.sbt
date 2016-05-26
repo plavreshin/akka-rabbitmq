@@ -9,7 +9,7 @@ homepage := Some(new URL("https://github.com/thenewmotion/akka-rabbitmq"))
 def akka(scalaVersion: String) = {
   val version = scalaVersion match {
     case x if x.startsWith("2.10") => "2.3.14"
-    case x => "2.4.1"
+    case x => "2.4.6"
   }
 
   def libs(xs: String*) = xs.map(x => "com.typesafe.akka" %% s"akka-$x" % version)
@@ -19,8 +19,8 @@ def akka(scalaVersion: String) = {
 
 libraryDependencies ++= {
   Seq(
-    "com.rabbitmq" % "amqp-client" % "3.4.2",
-    "com.typesafe" % "config" % "1.0.2" % "test",
+    "com.rabbitmq" % "amqp-client" % "3.6.2",
+    "com.typesafe" % "config" % "1.3.0" % "test",
     "org.specs2" %% "specs2-mock" % "2.4.17" % "test"
   )
 }
